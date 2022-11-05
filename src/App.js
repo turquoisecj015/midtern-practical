@@ -32,14 +32,14 @@ function App() {
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
   const [oper, setOper] = useState(0);
-  const [res, setRes] = useState(0);
+  const [res, setRes] = useState(2018002692);
   const [disp, setDisp] = useState('ENTER CODE');
 
   const numberClickHandler = (e) => {
     e.preventDefault();
     const value = e.target.innerHTML;
 
-    if (res==0) {
+    if (true) {
       if (parseInt(num1) == 0) {
         setNum1(value)
         setDisp(value);
@@ -51,42 +51,23 @@ function App() {
         }
       }
     }
-    else {
-      if (parseInt(num2) == 0) {
-        setNum2(value)
-        setDisp(value);
-      }
-      else{
-        if(String(num2).length<10){
-          setNum2(num2+value)
-          setDisp(num2+value);
-        }
-      }
-    }
   }
 
   const enterClickHandler = (e) => {
     e.preventDefault();
     const value = e.target.innerHTML;
-    if(res==0){
-      setRes(parseInt(num1));
-      setDisp("LOCKED");
-    }
-
-    else if(res==num2&&String(res).length==10)
-    {
+    if(res==num1){
       setDisp("OPEN");
-    } 
+    }
     else
     {
       setDisp("LOCKED");
-    }
+    } 
   }
 
   /*This is now working!*/
   const resetClickHandler = () => {
     setNum1(0);
-    setNum2(0);
     setDisp("ENTER CODE");
   };
   return (
