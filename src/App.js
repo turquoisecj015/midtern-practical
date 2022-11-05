@@ -73,7 +73,7 @@ function App() {
       setDisp("LOCKED");
     }
 
-    else if(res==num2)
+    else if(res==num2&&String(res).length==10)
     {
       setDisp("OPEN");
     } 
@@ -97,8 +97,8 @@ function App() {
         <CalcButton value="8" onClick={numberClickHandler}/>
         <CalcButton value="9" onClick={numberClickHandler}/>
         <CalcButton value="4" onClick={numberClickHandler}/>
-        <CalcButton value="6" onClick={numberClickHandler}/>
         <CalcButton value="5" onClick={numberClickHandler}/>
+        <CalcButton value="6" onClick={numberClickHandler}/>
         <CalcButton value="1" onClick={numberClickHandler}/>
         <CalcButton value="2" onClick={numberClickHandler}/>
         <CalcButton value="3" onClick={numberClickHandler}/>
